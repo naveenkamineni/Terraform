@@ -135,6 +135,11 @@ Default output format [json]:
 ```powershell
 terraform init
 ```
+### validate Terraform
+
+```powershell
+terraform validate
+```
 
 ### Plan Terraform Deployment
 
