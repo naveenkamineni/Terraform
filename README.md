@@ -1,5 +1,5 @@
 
-                                   Terraform = Code ➝ Cloud 🌉
+                                            Terraform = Code ➝ Cloud 🌉
 # Terraform: Automate Your Cloud Infrastructure
 
 🌍 What is Terraform?
@@ -13,8 +13,19 @@ Terraform is a tool that helps you automate cloud infrastructure (like AWS, Azur
 
 📋 Version Control: Keep track of infrastructure changes, just like software code.
 
-![Terraform Workflow](https://user-images.githubusercontent.com/example.png)
+![image](https://github.com/user-attachments/assets/da70983e-54cf-46c8-94ff-bc2a8d28c5d6)
 
+1️⃣ Terraform State File (terraform.tfstate)
+📌 What is it?
+
+This file keeps a record of your infrastructure (what resources are created, their IDs, etc.).
+
+Terraform uses it to know what exists and what changes need to be made.
+
+📂 Location: terraform.tfstate (created in the project directory)
+
+💡 Example:
+If you create an AWS EC2 instance, terraform.tfstate will store its ID, type, region, and other details.
 
 # Terraform: Creating AWS Services using Terraform
 
