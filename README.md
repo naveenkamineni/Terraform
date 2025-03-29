@@ -24,3 +24,55 @@ choco install terraform -y
 ###### check terraform installed or not : ######
 
 terraform --version
+
+Step 3: install AWSCLI and add to system path :
+
+#### command for windows#####
+
+winget install --id Amazon.AWSCLI --exact
+
+Note : Add the  awscli to the environmental variable (C:\Program Files\Amazon\AWSCLIV2\)
+
+##### check AWSCLI installed on windows and available everywhere ######
+
+aws --version
+
+# AWS Configuration ( permission to create instance in aws through cli/ IaC outside aws console)
+#### command ####
+Note : You Should have aws Access Key and Secret Key for Configuration
+
+aws configure
+
+AWS Access Key ID [*******************]: 
+
+AWS Secret Access Key [******************]: 
+
+Default region name [ap-south-1]: 
+
+Default output format [json]: 
+
+#### Now you can create resource in aws ########
+
+# Command to create and plan and apply aws resource using Terraform
+
+##### Commands ######
+
+terraform init
+
+terraform plan -out=tfplan
+
+terraform apply tfplan
+
+# if you remove the resource that you have created use the following command
+
+terraform destroy
+
+
+
+
+
+
+
+
+
+
