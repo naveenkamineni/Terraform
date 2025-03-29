@@ -1,78 +1,109 @@
-# Terraform
-Creating AWS Services using Terraform
-# installing prerequisite to setup Terraform
+# Terraform: Creating AWS Services using Terraform
 
-step 1: install chocolatey https://chocolatey.org/install
+## Prerequisites for Setting up Terraform
 
-##### if Windows Open PowerShell as Administarator and Run Below command ######
+### Step 1: Install Chocolatey (Windows Only)
 
-##### Command ###### 
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Chocolatey is a package manager for Windows that helps install Terraform easily.
 
-##### You can also get above Command in https://chocolatey.org/instal #######
+#### Install Chocolatey
 
-##### check chocolatey installed or Not : #####
+1. Open **PowerShell as Administrator**.
+2. Run the following command:
 
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+
+> **Note:** You can also find the latest installation command at [Chocolatey's official website](https://chocolatey.org/install).
+
+#### Verify Chocolatey Installation
+
+Run the following command:
+
+```powershell
 choco --version
+```
 
-step 2: Now You can install Terraform using Chocolatey
+### Step 2: Install Terraform using Chocolatey
 
-###### Run this command : #######
+Once Chocolatey is installed, install Terraform by running:
 
+```powershell
 choco install terraform -y
+```
 
-###### check terraform installed or not : ######
+#### Verify Terraform Installation
 
+```powershell
 terraform --version
+```
 
-Step 3: install AWSCLI and add to system path :
+### Step 3: Install AWS CLI and Add to System Path
 
-#### command for windows#####
+#### Install AWS CLI (Windows)
 
+```powershell
 winget install --id Amazon.AWSCLI --exact
+```
 
-Note : Add the  awscli to the environmental variable (C:\Program Files\Amazon\AWSCLIV2\)
+> **Note:** Add AWS CLI to the system environment variable:
+> - **Path:** `C:\Program Files\Amazon\AWSCLIV2\`
 
-##### check AWSCLI installed on windows and available everywhere ######
+#### Verify AWS CLI Installation
 
+```powershell
 aws --version
+```
 
-# AWS Configuration ( permission to create instance in aws through cli/ IaC outside aws console)
-#### command ####
-Note : You Should have aws Access Key and Secret Key for Configuration
+## AWS Configuration (Granting Permission to Create AWS Resources)
 
+Before using Terraform to create AWS resources, you need to configure AWS CLI with your credentials.
+
+#### Configure AWS CLI
+
+Run the following command and enter your credentials when prompted:
+
+```powershell
 aws configure
+```
 
-AWS Access Key ID [*******************]: 
+Example Input:
+```
+AWS Access Key ID [*******************]:
+AWS Secret Access Key [******************]:
+Default region name [ap-south-1]:
+Default output format [json]:
+```
 
-AWS Secret Access Key [******************]: 
+## Using Terraform to Create AWS Resources
 
-Default region name [ap-south-1]: 
+### Initialize Terraform
 
-Default output format [json]: 
-
-#### Now you can create resource in aws ########
-
-# Command to create and plan and apply aws resource using Terraform
-
-##### Commands ######
-
+```powershell
 terraform init
+```
 
+### Plan Terraform Deployment
+
+```powershell
 terraform plan -out=tfplan
+```
 
+### Apply Terraform Plan
+
+```powershell
 terraform apply tfplan
+```
 
-# if you remove the resource that you have created use the following command
+### Destroy Resources (If Needed)
 
+If you want to remove the resources created using Terraform, run:
+
+```powershell
 terraform destroy
+```
 
-
-
-
-
-
-
-
-
+---
+Now, you're all set to deploy AWS resources using Terraform! 🚀
 
