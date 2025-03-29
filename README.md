@@ -1,6 +1,7 @@
 
                                    Terraform = Code ➝ Cloud 🌉
-Terraform: Automate Your Cloud Infrastructure
+# Terraform: Automate Your Cloud Infrastructure
+
 🌍 What is Terraform?
 Terraform is a tool that helps you automate cloud infrastructure (like AWS, Azure, or Google Cloud) using code. Instead of clicking buttons on a website to create servers, databases, or networks, you write simple instructions in a file, and Terraform does everything for you!
 
