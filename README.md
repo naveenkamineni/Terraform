@@ -1,9 +1,29 @@
+# 🌍 Infrastructure as Code (IaC)
+🔹 What is IaC?
+
+Infrastructure as Code (IaC) allows you to define and manage cloud infrastructure using code instead of manually configuring resources. This makes deployments faster, repeatable, and scalable.
+
+## Different Types of IaC in Market
+AWS --> CloudFormation
+Azure --> ARM Templates (Azure Resource Manager)
+GCP --> Google Cloud Deployment Manager
+Open Stack ---> Heat Templates
+
+# 🔹 Then, Why Do We Need Terraform? 🤔
+While each cloud provider has its own IaC tool, they only work within that specific cloud. This creates problems when you need to work across multiple providers.
+
+# ✅ Terraform is a Universal IaC Language!
+
+Terraform, developed by HashiCorp, is a cloud-agnostic IaC tool that allows you to manage resources across AWS, Azure, GCP, and even on-premises environments using a single configuration language (HCL - HashiCorp Configuration Language).
+
 
                                             Terraform = Code ➝ Cloud 🌉
 # Terraform: Automate Your Cloud Infrastructure
 
 🌍 What is Terraform?
 Terraform is a tool that helps you automate cloud infrastructure (like AWS, Azure, or Google Cloud) using code. Instead of clicking buttons on a website to create servers, databases, or networks, you write simple instructions in a file, and Terraform does everything for you!
+
+# User ---> Terraform ---> CloudProvider ---> Cloud Infrastructure
 
 📌 Why Use Terraform?
 
@@ -15,7 +35,7 @@ Terraform is a tool that helps you automate cloud infrastructure (like AWS, Azur
 
 ![image](https://github.com/user-attachments/assets/da70983e-54cf-46c8-94ff-bc2a8d28c5d6)
 
-1️⃣ Terraform State File (terraform.tfstate)
+# 1️⃣ Terraform State File (terraform.tfstate)
 📌 What is it?
 
 This file keeps a record of your infrastructure (what resources are created, their IDs, etc.).
