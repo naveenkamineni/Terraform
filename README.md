@@ -3,10 +3,13 @@
 
 Infrastructure as Code (IaC) allows you to define and manage cloud infrastructure using code instead of manually configuring resources. This makes deployments faster, repeatable, and scalable.
 
-## Different Types of IaC in Market
+# Different Types of IaC in Market
 AWS --> CloudFormation
+
 Azure --> ARM Templates (Azure Resource Manager)
+
 GCP --> Google Cloud Deployment Manager
+
 Open Stack ---> Heat Templates
 
 # 🔹 Then, Why Do We Need Terraform? 🤔
